@@ -8,9 +8,6 @@ let successText = "Cảm ơn bé Thi đã say 'Yes'";
 
 const handleButtonClick = async (type) => {
   try {
-    // Fetch the current data from the server
-    const data = await buildData(type);
-
     // Update the UI based on the action
     if (type === "incrementYes") {
       question.innerHTML = successText;
@@ -18,6 +15,9 @@ const handleButtonClick = async (type) => {
     } else if (type === "incrementNo") {
       moveNoButton();
     }
+
+    // Fetch the current data from the server
+    const data = await buildData(type);
 
     // Send the updated data to the server
     await sendDataToServer(data);
