@@ -3,7 +3,7 @@ const noBtn = document.querySelector(".no-btn");
 const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 const questionId = document.querySelector("#question");
-
+ 
 let successText = "Cảm ơn bé Thi đã say 'Yes'";
 
 const handleButtonClick = async (type) => {
